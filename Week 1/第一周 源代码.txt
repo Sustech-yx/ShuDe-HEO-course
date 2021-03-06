@@ -1,0 +1,161 @@
+import java.math.BigDecimal;
+import java.util.*;
+import java.io.*;
+
+public class MainA {
+    static Scanner in = new Scanner(System.in);
+    static PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
+
+    public static void main(String[] args) { // 合法
+        // test1();
+        // test2();
+        // test3();
+        // test4();
+        // test5();
+        // test6();
+        // test7();
+        // test8();
+        // test9();
+        // test10();
+        test11();
+        out.close();
+    }
+
+    static void test1 () {
+        // 八大基本数据类型: byte short int long char float double boolean
+        out.println((byte)300); // 300 % 128
+
+    }
+    static void test2 () {
+        char c1 = '\u5357';
+
+        char c2 = '\u79d1';
+        char c3 = '\u5927';
+        out.printf("%c %c %c", c1, c2, c3);
+    }
+    static void test3 () {
+        int n = 123456789;
+        float f = n;
+        out.println(f);
+    }
+    static void test4 () {
+        double x = 9.997;
+        int x1 = (int)x;
+        out.println(x1); // 9
+        x1 = (int)Math.round(x);
+        out.println(x1); // 10
+    }
+    static void test5 () {
+        boolean condition = false;
+        int max = 0;
+        while (condition) {
+            // Do something.
+        }
+        do {
+            // Do something.
+        } while (condition);
+        for (int i = 0; i < max; i++) {
+            // Do something.
+        }
+    }
+    static void test6 () {
+        int count = 0;
+        out.println((double)(2 - 1.1));
+        for (double i = 0; i != 10 ; i += 0.1) {
+            count ++;
+            out.println("loop" + count);
+
+        }
+    }
+    static void test7 () {
+        double x = 0;
+        double y = 0;
+        double z = 1;
+        out.println(Double.isNaN(x/y));
+        out.println(x/y == Double.NaN);
+        out.println(Double.isInfinite(z/x));
+    }
+    static void test8 () {
+        int a = 0xcafe;
+        int b = 010;
+        long value = 11;
+        int i = (int)value;
+        int c = 0b1111_0100_0010_0100_0000;
+        out.println(a);
+        out.println(b);
+        out.println(c);
+    }
+    static void test9 () {
+        long g = 9L;
+        int[] a = new int[10];
+        // out.println(a.length);
+        int x = 1;
+        int y = x;
+        y --;
+        out.println(x);
+        int[] t = {1, 2, 3};
+        int[] t1 = t.clone();
+        for (int value:
+             t) {
+            value --;
+        }
+        out.println(Arrays.toString(t));
+        for (int i = 0; i < 3; i++) {
+            t1[i] --;
+        }
+
+        out.println(Arrays.toString(t));
+
+
+
+
+        out.println(t);
+        out.println(t[0]);
+        for (int value : t) { // value 相当于 t[i]
+            // 顺序遍历
+            out.println(value);
+
+        }
+        out.println();
+        out.println(Arrays.toString(t));
+        boolean[] c = new boolean[10];
+        BigDecimal[] bArray = new BigDecimal[10];
+        ArrayList<Integer> arrayList = new ArrayList<>(10);
+        for (int i = 0; i < 10; i++) {
+            a[i] = i;
+            arrayList.add(i);
+        }
+        for (int i = 0; i < 10; i++) {
+            out.print(a[i]);
+            out.print(arrayList.get(i));
+        }
+
+    }
+    static void test10 () {
+        BigDecimal b1 = new BigDecimal(2);
+        BigDecimal b2 = new BigDecimal(1.1);
+        out.println(b1.subtract(b2));
+
+    }
+    static void test11 () {
+        int[] t = new int[]{1, 2, 3}; // 这种定义的方式也是可以的。
+        int[] t1 = t.clone();
+        int[] t2 = t;
+        int[] t3 = Arrays.copyOf(t, 3);
+        for (int i = 0; i < 3; i++) {
+            t[i] --;
+        }
+        out.println("The value of t:");
+        out.println(Arrays.toString(t));
+
+        out.println("The value of t1:");
+        out.println(Arrays.toString(t1));
+
+        out.println("The value of t2:");
+        out.println(Arrays.toString(t2));
+
+        out.println("The value of t3:");
+        out.println(Arrays.toString(t3));
+    }
+}
+// 0111_1111
