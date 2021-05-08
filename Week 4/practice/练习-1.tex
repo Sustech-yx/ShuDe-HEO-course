@@ -1,0 +1,52 @@
+\documentclass[windows]{BHCexam}
+\usepackage{listings}
+
+\begin{document}
+\title{第四周复习}
+\notice{建议30分钟内完成。}
+\author{易翔}
+\date{2021.3.27}
+
+\maketitle
+
+\group{判断题}{共3小题}
+\begin{questions}[r]
+\question Instance methods in a class can also be overloaded.\key{T}
+\question \_\_gcd is a valid name of a variable.\key{T}
+\question Static methods can be called without being instantiated.\key{T}
+\end{questions}
+
+\group{单项选择题}{共5小题}
+\begin{questions}[pr]
+\question Which of the following words is not a Java reserved word?\key{D}
+\fourchoices{throw}{short}{extends}{instance}
+
+\question Which of the following is NOT a valid way to declare an array?\key{C}
+\fourchoices{int[] a = new int[12];}{char b[] = \{`1'\};}{long c[] = new long[2]\{1L, 3L\};}{boolean[] d; d = new boolean[2];}
+
+\question What will the console output after executing the following statement?\key{D}\\
+int t = 6;\\
+System.out.print(t ++ + ++ t);
+\fourchoices{Occur Compile Error}{12}{13}{14}
+
+\question The following is part of the code in the program. Which line of the statement will report a runtime error?\key{D}\\
+byte i = 5;\\
+System.out.print((int) i);\\
+i = i + 1;
+\fourchoices{There is no error.}{Line 1}{Line 2}{Line 3}
+\question What will the console output after executing the following statement?\key{C}\\
+char[] chars = new char[]\{`1', `2', `3'\};\\
+System.out.println(chars);
+\fourchoices{Occur Compile Error}{Out-put the address of the array}{123}{[`1', `2', `3']}
+\end{questions}
+
+\group{简答题}{共1小题}
+\begin{questions}[t]
+\question Now you are ask to recursively(递归地) approach a method to calculate factorial(阶乘) of a nonnegative integer n.
+
+public static int factorial (int n) \{\\
+	\text{ }\quad\quad// implement your code here.\\
+\}
+\key{略}
+\end{questions}
+\end{document}
